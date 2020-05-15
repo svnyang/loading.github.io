@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1">
 <link rel="stylesheet" href="css/style.css" >
 <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="stylesheet" href="https://valine.js.org/style/bundle-meteor.css">
 <script>
   var _hmt = _hmt || [];
   (function() {
@@ -13731,7 +13732,9 @@
     <div class="row align-items-center ">
       <div class="col-md-6">
         <div class="copyright">
-          &copy; 2019-2020 All Rights Reserved
+          &copy; 2019-2020 All Rights Reserved  Read, <span id="/index1.html" class="leancloud_visitors" data-flag-title="文章阅读量统计">
+            <i class="leancloud-visitors-count"></i>
+          </span>
         </div>
       </div>
       <div class="col-md-6">
@@ -13769,19 +13772,23 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="js/velocity.min.js"></script><!--返回顶部-->
 <script type="text/javascript" src="js/utils.js"></script><!--返回顶部-->
-<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script type="text/javascript" src="js/Valine.min.js"></script> <!--留言-->
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
  <script>
-new Valine({
-      av: AV, 
-      el: '.comment', 
-      verify: true, 
-      app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', 
-      app_key: 'dTioucSGHIUy0DkUYcXgqloj', 
+ new Valine({
+      el: '#vcomments', 
+      app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
+      app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
       placeholder: '@SunYang', 
-      avatar:'identicon',
+      path: window.location.pathname,
+      avatar:'mp', // 头像
       lang: 'zh-cn',
-      pageSize:'10',
+      meta: ["nick", "mail", "link"],
+      recordIP:true, // 是否记录评论者IP
+      visitor: true, // 文章访问量统计
+      enableQQ: true, // 自动获取QQ昵称和QQ头像
+      serverURLs: "",
+      requiredFields: [],
+      pageSize:'10' // 评论列表分页，每页条数
   });
 $('.Leave').click(function(){
     $('.Leave-text').show();
