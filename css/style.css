@@ -1263,8 +1263,8 @@ to {
 	height:18px;
 }
 }.load-sixteen {
-	margin:83px auto;
-	width:80px;
+	margin:82px auto;
+	width:100px;
 }
 .k-line {
 	display:inline-block;
@@ -1524,7 +1524,7 @@ to {
 }
 .k-letter-holder {
 	height:20px;
-	width:65px;
+	width:85px;
 	margin:auto;
 }
 .k-letter {
@@ -10142,7 +10142,7 @@ to {
 	transform:translate(-40px,0px) rotate(-90deg)
 }
 }.load-onehundred-twelve {
-	width:93px;
+	width:121px;
 	margin:83px auto;
 }
 .onehundred-twelve {
@@ -11302,9 +11302,9 @@ to {
 .onehundred-twenty-five:before {
 	content:"me";
 	font-size:12px;
-	left:2px;
+	left:3px;
 	text-align:center;
-	top:2px;
+	top:-3px;
 }
 .onehundred-twenty-five:after {
 	width:2px;
