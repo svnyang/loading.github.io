@@ -23,10 +23,7 @@ a:hover {
 	-webkit-transition:all .5s ease;
 	-moz-transition:all .5s ease;
 }
-
 a {
-	/*color:red;
-	*/
     padding:0;
 	text-decoration:none;
 	transition:all .5s ease;
@@ -12094,7 +12091,6 @@ to {
     filter: blur(1px);
     animation: Onehundredandtwelveshadow .5s alternate infinite ease;
 }
-
 @keyframes Onehundredandtwelveshadow{
     0%{
         transform: scaleX(1.5);
