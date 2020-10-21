@@ -12113,3 +12113,125 @@ to {
     right:15%;
     animation-delay: .3s;
 }
+
+.bouncingLoader-main {
+    width: 70px;
+    height: 36px;
+    margin: 77px auto;
+}
+.load-bouncing-Loader > div, .load-bouncing-Loader:before, .load-bouncing-Loader:after {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: #27374d;
+    margin-bottom: -5px;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.load-bouncing-Loader > div, .load-bouncing-Loader:before, .load-bouncing-Loader:after {
+    content: "";
+}
+
+.load-bouncing-Loader > div {
+    margin: 0 5px;
+}
+
+.load-bouncing-Loader > div {
+    animation-delay: 0.2s;
+}
+
+.load-bouncing-Loader:after {
+    animation-delay: 0.4s;
+}
+
+@keyframes bouncing-loader {
+    to {
+        opacity: 0.1;
+        transform: translate3d(0, -16px, 0);
+    }
+}
+.load-pulseAnim{
+	width: 32px;
+    height: 36px;
+    margin: 77px auto;
+}
+.loading-pulseAnim-Y {
+    display: block;
+    padding: 16px;
+    border-radius: 50%;
+    background:#27374d;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(40, 55, 77, 0.4);
+    animation: pulseAnim 2s infinite;
+}
+
+@keyframes pulseAnim {
+    0% {
+        box-shadow: 0 0 0 rgba(40, 55, 77, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(40, 55, 77, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 55, 77, 0);
+    }
+}
+
+
+.load-arrowScrollDown-main{
+	width: 16px;
+    height: 36px;
+    margin: 77px auto;
+}
+.load-arrowScrollDown svg {
+    fill: #27374d;
+    animation: arrowAnimation 1.5s infinite ease-out;
+}
+@keyframes arrowAnimation {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0
+    }
+    30% {
+      opacity: 1
+    }
+    60% {
+      opacity: 1
+    }
+    to {
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px);
+      opacity: 0
+    }
+  }
+
+  .load-arrowBounce-main{
+	width: 16px;
+    height: 36px;
+    margin: 77px auto;
+}
+  .load-arrowBounce {
+    position: relative;
+    animation: bounce 2s infinite;
+}
+
+.load-arrowBounce svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #27374d;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
