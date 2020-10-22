@@ -12213,7 +12213,7 @@ to {
 }
   .load-arrowBounce {
     position: relative;
-    animation: bounce 2s infinite;
+    animation: bounce-arrow 2s infinite;
 }
 
 .load-arrowBounce svg {
@@ -12224,7 +12224,7 @@ to {
     fill: #27374d;
 }
 
-@keyframes bounce {
+@keyframes bounce-arrow {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
@@ -12233,5 +12233,39 @@ to {
     }
     60% {
         transform: translateY(-15px);
+    }
+}
+.more{
+	background-color: rgba(39, 55, 77, 0.1);
+    width: 9vw;
+    padding: 0.45vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 6px;
+	margin-top: 2vw;
+}
+.more a ,.more p{
+	font-size: .8125em;
+	color: #27374d;
+	font-weight: 500;
+}
+
+.more a:hover {
+    text-decoration: none;
+}
+
+.more p{
+	margin-bottom: 0;
+}
+
+.more {
+	border-radius: 6px;
+    box-shadow: 0 0 0 0 rgba(39, 55, 77, 0.05);
+    animation: pulse-more 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse-more {
+    to {
+      box-shadow: 0 0 0 30px rgba(230, 237, 255, 0);
     }
 }
