@@ -1541,36 +1541,7 @@
   </div>
 </div>
 
-<script>
- var _content = []; //临时存储li循环内容
-		var loading = {
-			_default:12, //默认显示图片个数
-			_loading:12,  //每次点击按钮后加载的个数
-			init:function(){
-				var lis = $(".container .hidden .col");
-				$(".container .list").html("");
-				for(var n=0;n<loading._default;n++){
-					lis.eq(n).appendTo(".container .list");
-				}
-				for(var i=loading._default;i<lis.length;i++){
-					_content.push(lis.eq(i));
-				}
-				$(".container .hidden").html("");
-			},
-			loadMore:function(){
-				var mLis = $(".container .list .col").length;
-				for(var i =0;i<loading._loading;i++){
-					var target = _content.shift();
-					if(!target){
-						$('.container .more').html("<p>全部加载完...</p>");
-						break;
-					}
-					$(".container .list").append(target);
-				}
-			}
-		}
-		loading.init();
-</script>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/loading.github.io/js/app.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/loading.github.io/js/velocity.min.js"></script><!--返回顶部-->
@@ -1616,6 +1587,35 @@ $('.Shut').click(function(){
   })
 $(window).scroll(function() {$(window).scrollTop() >= 470 ? $("header").addClass("fixed-header") : $("header").removeClass("fixed-header")});
  </script>
- 
+ <script>
+ var _content = []; //临时存储li循环内容
+		var loading = {
+			_default:12, //默认显示图片个数
+			_loading:12,  //每次点击按钮后加载的个数
+			init:function(){
+				var lis = $(".container .hidden .col");
+				$(".container .list").html("");
+				for(var n=0;n<loading._default;n++){
+					lis.eq(n).appendTo(".container .list");
+				}
+				for(var i=loading._default;i<lis.length;i++){
+					_content.push(lis.eq(i));
+				}
+				$(".container .hidden").html("");
+			},
+			loadMore:function(){
+				var mLis = $(".container .list .col").length;
+				for(var i =0;i<loading._loading;i++){
+					var target = _content.shift();
+					if(!target){
+						$('.container .more').html("<p>全部加载完...</p>");
+						break;
+					}
+					$(".container .list").append(target);
+				}
+			}
+		}
+		loading.init();
+</script>
 </body>
 </html>
