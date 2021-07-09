@@ -43,7 +43,7 @@
         </a>
       </h1>
       <nav class="nav-link">
-        <ul class="left"><li class="first last"><a href="http://svnyang.cn/">关于我</a></li></ul> 
+        <ul class="left"><li class="first last"><a  target="_blank" href="https://sunyang.vip/">关于我</a></li></ul> 
       </nav>
     </div>
   </div>	
@@ -1506,7 +1506,7 @@
     <div class="row align-items-center ">
       <div class="col-md-6">
         <div class="copyright">
-          &copy; 2019-2020 All Rights Reserved
+          &copy; 2019-2021 All Rights Reserved
         </div>
       </div>
       <div class="col-md-6">
@@ -1526,54 +1526,15 @@
     </div>
 </div>
 
-
-
  <!--返回顶部-->
  <i class="fa fa-arrow-up" id="go-up" aria-hidden="true" ></i>
- <!--留言-->
-<div class="Leave"></div>
-<div class="Leave-text">
-  <div class="Leave-message">
-      <div class="Shut">
-        <img width="17" src="images/icon-close.svg" alt="">
-      </div>
-      <div id="vcomments"></div>
-  </div>
-</div>
-
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/loading.github.io/js/app.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/loading.github.io/js/velocity.min.js"></script><!--返回顶部-->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/svnyang/loading.github.io/js/utils.js"></script><!--返回顶部-->
 <script type="text/javascript" src="js/html.js"></script>
-<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
  <script>
- new Valine({
-      el: '#vcomments', 
-      app_id: 'BDMNhQVBVrPSk0sPtuoES5pR-gzGzoHsz', // 这里填写上面得到的APP ID
-      app_key: 'dTioucSGHIUy0DkUYcXgqloj', // 这里填写上面得到的APP KEY
-      placeholder: '@SunYang \n在昵称中留下QQ号（系统自动获取QQ昵称、QQ邮箱、QQ头像等信息) 以便收到回复。', 
-      path: window.location.pathname,
-      avatar:'mp', // 头像
-      lang: 'zh-cn',
-      meta: ["nick", "mail", "link"],
-      recordIP:true, // 是否记录评论者IP
-      visitor: true, // 文章访问量统计
-      enableQQ: true, // 自动获取QQ昵称和QQ头像
-      serverURLs: "",
-      requiredFields: [],
-      pageSize:'10' // 评论列表分页，每页条数
-  });
-$('.Leave').click(function(){
-    $('.Leave-text').show();
-    $('.display-4').hide();
-}); 
-$('.Shut').click(function(){
-    $('.Leave-text').hide();
-    $('.display-4').show();
-}); 
-
  $(document).ready(function(){  
    var clipboard2 = new ClipboardJS('.btn2'); 
    clipboard2.on('success', function(e) {
